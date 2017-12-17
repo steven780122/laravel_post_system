@@ -85,6 +85,20 @@ class PostController extends Controller
         // return;    //還沒寫也要先';'
     }
 
+    // 測試for AJAX POST
+    public function store_test()
+    {
+        // dd(request()->all());
+        $post = new Post();
+        $post->title = request('firstname');
+        $post->content = request('lastname');
+        $post->save();
+
+        // return redirect('posts');
+    }
+
+
+
      // 編輯頁面
     public function edit()
     {

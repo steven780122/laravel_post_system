@@ -35,6 +35,20 @@
         </div>        
         <div style="height: 20px;">
         </div>
+
+        {{--  <form action="/store_test" method="post">  --}}
+        <form id="sentToBack">
+            {{ csrf_field() }}
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey">
+            <br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse">
+            <br><br>
+            <input type="submit" value="Submit" onClick="Submit()">
+        </form> 
+
+
         <div>
             
             @foreach($posts as $post)
@@ -80,6 +94,30 @@
 
         </div><!-- /.blog-main -->
     </div>
+
+
+      <script>
+         var Submit=function(){
+            var URLs="store_test";
+           
+            $.ajax({
+                url: URLs,
+                data: $('#sentToBack').serialize(),
+                type:"POST",
+                dataType:'text',
+
+                success: function(msg){
+                    alert(msg);
+                },
+
+                 error:function(xhr, ajaxOptions, thrownError){ 
+                    alert(xhr.status); 
+                    alert(thrownError); 
+                 }
+            });
+            
+        }
+        </script>
 @endsection
 
         

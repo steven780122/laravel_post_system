@@ -11,6 +11,8 @@
 |
 */
 
+Route::post('/store_test', '\App\Http\Controllers\PostController@store_test');
+
 // 文章列表頁
 Route::get('/posts', '\App\Http\Controllers\PostController@index');
 
