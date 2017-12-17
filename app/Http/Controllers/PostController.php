@@ -76,6 +76,13 @@ class PostController extends Controller
         // $params = request(['title', 'content']);    // 其實這跟法二是一樣的，但簡短很多好看很多
         // Post::create($params);
 
+
+        // 實行表單驗證
+        $this->validate(request(), [
+            'title' => 'required|string|max:100|min:5',     // 必須存在 需視string max100字元等
+            'content' => 'required|string|min:10'
+        ]);
+
         // 法四: 乾脆寫成一列
         $post = Post::create(request(['title', 'content']));
         // dd($post);   //會發現會有問題>> 是因為只要post

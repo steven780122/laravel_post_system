@@ -15,7 +15,19 @@
                 <label>內容</label>
                 <textarea id="content" style="height:400px;max-height:500px;" name="content" class="form-control" placeholder="這裏是內容"></textarea>
             </div>
-                <button type="submit" class="btn btn-default">提交</button>
+
+
+            {{--  因為在store的controller那邊已經做了表單驗證，這邊要顯示錯誤訊息:  --}}
+            @if (count($errors) > 0)
+            <div class="alert alert-danger" role="alert">
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </div>
+            @endif
+
+
+            <button type="submit" class="btn btn-default">提交</button>
         </form>
         <br>
 
