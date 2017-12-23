@@ -110,4 +110,11 @@ class PostController extends Controller
 
     }
 
+    public function imageUpload()
+    {
+        // TODO:
+        
+
+    }
+
 }

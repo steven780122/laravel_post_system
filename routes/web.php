@@ -45,7 +45,6 @@ Route::get('/', function () {
 // Route::get('/posts', 'App\Http\Controllers\PostController@index');    // 一定要加上命名空間
 
 
-
 // 也可以用post等
 // any :  都可以匹配
 // 入只想支持get post >>  使用match
@@ -71,3 +70,9 @@ Route::get('/', function () {
 // Route::get('/posts/{post}', 'App\Http\Controllers\PostController@show');
 // function show(\App\Post $post){
 // }
+
+
+// 上傳圖片:
+Route::post('/posts/image/upload', '\App\Http\Controllers\PostController@imageUpload');   
+
+

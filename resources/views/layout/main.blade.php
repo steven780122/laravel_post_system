@@ -10,7 +10,10 @@
     <!-- 上述3個meta標籤*必須*放在最前面，任何其他內容都*必須*跟隨其後！ -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="csrf-token" content="MESUY3topeHgvFqsy9EcM916UWQq6khiGHM91wHy">
+
+    {{--  用laravel的:  --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{--  <meta name="csrf-token" content="MESUY3topeHgvFqsy9EcM916UWQq6khiGHM91wHy">  --}}
 
 
     <title>laravel for blog</title>

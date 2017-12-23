@@ -21,7 +21,11 @@
 
             <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}} by <a href="#">Kassandra Ankunding2</a></p>
 
-            <p>{{$post->content}}</p>
+            {{--  以下會有html tag(用wangeditor後)  --}}
+            {{--  <p>{{$post->content}}</p>  --}}
+            {{--  因此改為:  --}}
+            {!! $post->content !!}
+
             <div>
                 <a href="/posts/62/zan" type="button" class="btn btn-primary btn-lg">贊</a>
 
