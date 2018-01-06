@@ -93,9 +93,10 @@ class PostController extends Controller
     }
 
      // 編輯頁面
-    public function edit()
+    public function edit(Post $post)
     {
-        return view("post/edit");
+        // 從route拿邊拿到post參數，才把參數繼續帶到post/edit頁!
+        return view("post/edit", compact("post"));
     }
 
     // 編輯邏輯
