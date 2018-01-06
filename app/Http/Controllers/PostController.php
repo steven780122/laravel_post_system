@@ -110,11 +110,14 @@ class PostController extends Controller
 
     }
 
-    public function imageUpload()
+    public function imageUpload(Request $request)
     {
-        // TODO:
-        
+        // 從request拿到file後存到public空間，並且對他重命名
+        $path = $request->file('wangEditorH5File')->storePublicly(md5(time()));
 
+        // 返回的數據就是去storage裡面去找找看是否有該路徑圖檔!!
+        return asset('storage/'.$path);
+        // dd(request()->all());
     }
 
 }
