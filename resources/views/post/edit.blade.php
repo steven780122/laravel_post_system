@@ -18,6 +18,21 @@
                 {{$post->content}}
                 </textarea>
             </div>
+
+            <!-- 同建置頁面的驗證錯誤(根據controller指定的驗證提示 -->
+            <!-- 因為在store的controller那邊已經做了表單驗證，這邊要顯示錯誤訊息:  -->
+            <!-- 又因為創建頁面也用了依樣的error提示 所以我們抽出去吧!!! -->
+            <!-- @if (count($errors) > 0)
+            <div class="alert alert-danger" role="alert">
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </div>
+            @endif -->
+
+            @include("layout.error")
+
+
             <button type="submit" class="btn btn-default">提交</button>
         </form>
         <br>

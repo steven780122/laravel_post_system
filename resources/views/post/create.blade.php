@@ -17,14 +17,16 @@
             </div>
 
 
-              <!-- 因為在store的controller那邊已經做了表單驗證，這邊要顯示錯誤訊息:  -->
-            @if (count($errors) > 0)
+            <!-- 因為在store的controller那邊已經做了表單驗證，這邊要顯示錯誤訊息:  -->
+            <!-- @if (count($errors) > 0)
             <div class="alert alert-danger" role="alert">
                 @foreach($errors->all() as $error)
                     <li>{{$error}}</li>
                 @endforeach
             </div>
-            @endif
+            @endif -->
+            <!-- 因為錯誤驗證和編輯那邊已經有重複 所以抽出去吧!! -->
+            @include('layout.error')
 
 
             <button type="submit" class="btn btn-default">提交</button>
