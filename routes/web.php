@@ -28,12 +28,12 @@ Route::post('/posts', '\App\Http\Controllers\PostController@store');    // 方�
 Route::get('/posts/{post}/edit', '\App\Http\Controllers\PostController@edit');   
 Route::put('/posts/{post}', '\App\Http\Controllers\PostController@update');   
 // 刪除文章
-Route::get('/posts/delete', '\App\Http\Controllers\PostController@delete');   
+Route::get('/posts/{post}/delete', '\App\Http\Controllers\PostController@delete');   
 
 
 
 // ori demo
-Route::get('/', function () {
+Route::get('/', function () {   
     return view('welcome');
 });
 

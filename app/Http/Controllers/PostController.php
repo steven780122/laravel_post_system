@@ -119,9 +119,14 @@ class PostController extends Controller
     }
 
     // 刪除邏輯
-    public function delete()
+    public function delete(Post $post)
     {
+        //TODO: 權限驗證之後補  因為正常來說應該要只有po文的人可以刪!!
 
+
+        $post->delete();
+
+        return redirect("/posts");
     }
 
     public function imageUpload(Request $request)
