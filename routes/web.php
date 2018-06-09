@@ -26,7 +26,7 @@ Route::get('/posts/{post}', '\App\Http\Controllers\PostController@show');     //
 Route::post('/posts', '\App\Http\Controllers\PostController@store');    // 方法和最上面不衝突，因為方法不同，這是創建頁面點提交時的具體行為
 // 編輯文章
 Route::get('/posts/{post}/edit', '\App\Http\Controllers\PostController@edit');   
-Route::post('/posts/{post}', '\App\Http\Controllers\PostController@update');   
+Route::put('/posts/{post}', '\App\Http\Controllers\PostController@update');   
 // 刪除文章
 Route::get('/posts/delete', '\App\Http\Controllers\PostController@delete');   
 

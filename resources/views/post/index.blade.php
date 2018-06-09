@@ -44,19 +44,19 @@
                 <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}}<a href="/user/5">Kassandra Ankunding2</a></p>
 
 
-                {{--  下方是讀取DB content但是改為限制個數  參數是指   來源、字數限制、超過顯示--}}
-                {{--  但是以下會把原生的<p>印出來  --}}
-                {{--  <p>{{str_limit($post->content, 100, '...')}}</p>  --}}
+                  <!-- 下方是讀取DB content但是改為限制個數  參數是指   來源、字數限制、超過顯示 -->
+                  <!-- 但是以下會把原生的<p>印出來   -->
+                  <!-- <p>{{str_limit($post->content, 100, '...')}}</p>   -->
 
-                {{--  所以改為:  --}}
+                  <!-- 所以改為:   -->
                 {!! str_limit($post->content, 100, '...') !!}
                 
                 
                 
-                {{--  下方是原本讀取DB的content  --}}
-                {{--  <p>{{$post->content}}</p>  --}}
-                {{--  下方是原本寫死  --}}
-                {{--  <p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好...  --}}
+                  <!-- 下方是原本讀取DB的content   -->
+                  <!-- <p>{{$post->content}}</p>   -->
+                  <!-- 下方是原本寫死   -->
+                  <!-- <p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好...   -->
                 <p class="blog-post-meta">贊 0  | 評論 0</p>
             </div>
             @endforeach

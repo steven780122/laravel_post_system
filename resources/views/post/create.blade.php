@@ -3,9 +3,9 @@
 @section("content")
     <div class="col-sm-8 blog-main">
         <form action="/posts" method="POST">
-        {{--  Laravel提供更簡潔方法:  --}}
+        <!-- Laravel提供更簡潔方法:  -->
         {{csrf_field()}}
-            {{--  <input type="hidden" name="_token" value="{{csrf_token()}}"/>   {{-- hidden把此隱藏    這裡是用來避免csrf跨站式攻擊--}}
+            <!--  <input type="hidden" name="_token" value="{{csrf_token()}}"/>    hidden把此隱藏    這裡是用來避免csrf跨站式攻擊 -->
 
             <div class="form-group">
                 <label>標題</label>
@@ -17,7 +17,7 @@
             </div>
 
 
-            {{--  因為在store的controller那邊已經做了表單驗證，這邊要顯示錯誤訊息:  --}}
+              <!-- 因為在store的controller那邊已經做了表單驗證，這邊要顯示錯誤訊息:  -->
             @if (count($errors) > 0)
             <div class="alert alert-danger" role="alert">
                 @foreach($errors->all() as $error)

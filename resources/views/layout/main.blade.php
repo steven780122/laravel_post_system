@@ -11,9 +11,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    {{--  用laravel的:  --}}
+    <!-- 用laravel的:  -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    {{--  <meta name="csrf-token" content="MESUY3topeHgvFqsy9EcM916UWQq6khiGHM91wHy">  --}}
+     <!-- <meta name="csrf-token" content="MESUY3topeHgvFqsy9EcM916UWQq6khiGHM91wHy">  -->
 
 
     <title>laravel for blog</title>
