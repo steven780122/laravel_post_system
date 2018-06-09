@@ -100,8 +100,21 @@ class PostController extends Controller
     }
 
     // 編輯邏輯
-    public function update()
+    public function update(Post $post)
     {
+        // 實行表單驗證
+        $this->validate(request(), [
+            'title' => 'required|string|max:100|min:5',     // 必須存在 需視string max100字元等
+            'content' => 'required|string|min:10'
+        ]);
+
+        // 邏輯
+        $post->title = request('title');
+        $post->content = request('content');
+        $post->save();
+
+        // 渲染
+        return redirect("/posts/{$post->id}");   // 我發現用單引號會出錯!!
 
     }
 

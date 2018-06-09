@@ -46,8 +46,9 @@
 
     <div class="row">
         
-    {{--  這邊就是中間(row)的左邊>> 會相異的部分:content，我們使用@yield("content")再去其他地方刪掉保留content  --}}   
     @yield("content")
+      <!-- 這邊就是中間(row)的左邊 會相異的部分content，我們使用'yield(XXX)再去其他地方刪掉保留content   -->
+    
 
     @include("layout.slidebar")
 
